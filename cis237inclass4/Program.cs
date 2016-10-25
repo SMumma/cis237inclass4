@@ -10,6 +10,17 @@ namespace cis237inclass4
     {
         static void Main(string[] args)
         {
+            IIntegerLinkedList myLinkedList = new IntegerLinkedList();
+
+            myLinkedList.AddToFront(5);
+            myLinkedList.AddToFront(4);
+            myLinkedList.AddToFront(3);
+
+            myLinkedList.AddToBack(6);
+            myLinkedList.AddToBack(7);
+            myLinkedList.AddToBack(8);
+
+            myLinkedList.Display();
         }
     }
 }
