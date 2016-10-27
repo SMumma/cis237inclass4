@@ -10,17 +10,30 @@ namespace cis237inclass4
     {
         static void Main(string[] args)
         {
-            IIntegerLinkedList myLinkedList = new IntegerLinkedList();
 
-            myLinkedList.AddToFront(5);
-            myLinkedList.AddToFront(4);
-            myLinkedList.AddToFront(3);
+            //Here is a generic linked list that stores strings.
+            IGenericLinkedList<string> myGenericLinkedList = new GenericLinkedList<string>();
 
-            myLinkedList.AddToBack(6);
-            myLinkedList.AddToBack(7);
-            myLinkedList.AddToBack(8);
+            //Here is a generic linked list that stores any class that implements the IComparable Interface.
+            IGenericLinkedList<IComparable> myComparableLinkedList = new GenericLinkedList<IComparable>();
 
-            myLinkedList.Display();
+            //Let's use the string one
+            myGenericLinkedList.AddToFront("Foo");
+            myGenericLinkedList.AddToFront("Dave");
+            myGenericLinkedList.AddToFront("Bear");
+            myGenericLinkedList.AddToFront("Barnes");
+
+            myGenericLinkedList.AddToBack("Back 3");
+            myGenericLinkedList.AddToBack("Back 2");
+            myGenericLinkedList.AddToBack("Back 1");
+
+            myGenericLinkedList.Display();
+
+            string frontGuy = myGenericLinkedList.RemoveFromFront();
+
+            Console.WriteLine(frontGuy);
+
+            myGenericLinkedList.Display();
         }
     }
 }

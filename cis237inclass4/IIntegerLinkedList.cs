@@ -8,12 +8,6 @@ namespace cis237inclass4
 {
     interface IIntegerLinkedList
     {
-        void AddToFront(int Data);
-        void AddToBack(int Data);
-        int RemoveFromFront();
-        int RemoveFromBack();
-        void Display();
-        bool IsEmpty { get; }
-        int Size { get; }
+      
     }
 }
